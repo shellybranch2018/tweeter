@@ -1,0 +1,15 @@
+#nav-bar {
+    background: #00A187;
+    padding: 0px 0px 0px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+}
+
+.header {
+ font-size: 40px;
+ color: #e8fdff;
+ position:relative;
+ top:-16px
+ 
+}

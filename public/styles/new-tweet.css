@@ -1,0 +1,11 @@
+.new-tweet {
+    padding: 10px;
+    border: 1px solid #cccc;
+    border-radius: 6px;
+    background: #eee;
+}
+.new-tweet h2 {padding:0px; margin:0px }
+hr { border: .5px solid #000000; position: relative; top: -6px}
+form textarea {width: 100%; padding: 10px}
+form input { background:#eeeeee}
+.counter { float: right; font-style: italic}

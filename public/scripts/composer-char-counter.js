@@ -3,9 +3,13 @@ $(document).ready(function() {
 
     // Sets up the count and applies it to the form
     $( 'textarea' ).on( "keypress", function( event ) {      
-        value = $(this).val().length;               
+        value = $(this).val().length; 
+        if($(this).val().length > 140){
+            $(".counter" ).css( "color", "red" );
+            
+        }              
         $(this).siblings().html(value);
-
+        
       })
 
 

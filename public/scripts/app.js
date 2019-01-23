@@ -43,14 +43,32 @@ $(document).ready(function () {
         return $tweet;
     }
 
+    $('#tweet-form').on('submit', function (event) {
+      event.preventDefault();
+      let newTweetData = $(this).serialize(); 
+ 
+    if( newTweetData === "text=" || newTweetData  === null){
+      alert("You must enter charaters to submit a tweet. Don't be shy.")
+    } else $.post('/tweets',newTweetData)
+      
+      
+    
+    
+      //postDog(newDogData)
+    
+    })
+
+
+    
+
     function loadTweets() {
-        $
-            .ajax('/tweets', {method: 'GET'})
+      
+        $.ajax('/tweets', {method: 'GET'})
             .then(function (bigTweets) {
                 //console.log('Success: ', bigTweets);
                 renderTweets(bigTweets);
             });
-
+            
     }
     loadTweets();
 

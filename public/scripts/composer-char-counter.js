@@ -6,29 +6,11 @@ $(document).ready(function() {
         value = $(this).val().length; 
         if($(this).val().length > 140){
             $(".counter" ).css( "color", "red" );
+            alert("You have reached the 140 charater limit.")
             
-        }              
-        $(this).siblings().html(value);
+        } else $(this).siblings().html(value);
         
       })
-
-      
-    //  $('article header h3').addClass("tweet");
-    //  $('article header span').addClass("handle");
-    //  $('article p').addClass("content");
-    //  $('footer span').addClass("when");
-    //  $('h3').html(name);
-    //  $('.content').html(text);
-    //  $('.handle').html(handle);
-    //  $('.when').html(created);
-    //  $( 'article img' ).attr({
-    //     src: avatars,
-    //     title: "jQuery",
-    //     alt: "Avatar"
-    //   });
-     
-
-
 
 });
 

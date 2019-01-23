@@ -86,39 +86,43 @@ $(document).ready(function() {
   }
 
 
-//   <article>
-//     <header>
-//         <img class="logo">
-//         <h3>Billy Bob</h3>
-//         <span>Tweet Handle</span>
-//     </header>
-//     <p>Tweet</p>
-//     <footer>
-//         <span>10 Days Ago</span>
-//     </footer>
-//   </article>
+/* <article>
+    <header>
+        <img class="logo">
+            <h3></h3>
+            <span></span>
+        </header>
+        <aside></aside>
+        <footer>
+            <span></span>
+        </footer>
+    </article> */
 
   
   function createTweetElement(tweet) {
-    var text = tweet["content"].text;
-    var header = tweet["user"].name;
-    var created = tweet.created_at;
-    var handle = tweet["user"].handle;
-      //console.log(text)
-    //let $tweet = $('<article>').addClass('tweet');
-    let $text = $('aside').html(text);
-    let $header = $('article h3').append(header);
-    let $created = $('footer span').html(created);
-    let $handle = $('article header span').html(handle);
+
+    var avatars = tweet["user"].avatars.small;
+    
+// Header content   
+    var img = $('<img>').attr({ src: avatars});
+    var h3 = $('<h3>').text(tweet["user"].name);
+    var span = $('<span>').text(tweet["user"].handle);
+// Appending all to header
+    var header = $('<header>').append(h3).append(img).append(span);
+// End Header content 
 
 
+// Tweet body
+   var article = $('<article>').text(tweet["content"].text);
+// End Tweet body
 
-    //$('article header h3').addClass("tweet");
-     $('article header span').addClass("handle");
-     $('aside').addClass("content");
-     $('footer span').addClass("when");
-     
-    return $tweet, $text, $created, $header, $handle;
+// Footer content
+   var postDate = $('<span>').text(tweet.created_at);
+   var footer =$('<footer>').append(postDate);
+//console.log(text)
+    let $tweet = $('<article>').addClass('tweets').append(header).append(article).append(footer);
+    
+    return $tweet;
   }
   
   renderTweets(data);

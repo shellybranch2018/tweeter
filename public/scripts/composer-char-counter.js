@@ -13,14 +13,21 @@ $(document).ready(function() {
       })
 
       
-     $('article header h3').addClass("tweet");
-     $('article header span').addClass("handle");
-     $('article p').addClass("content");
-     $('footer span').addClass("when");
-     $('h3').html(name);
-     $('.content').html(text);
-     $('.handle').html(handle);
-     $('.when').html(created);
+    //  $('article header h3').addClass("tweet");
+    //  $('article header span').addClass("handle");
+    //  $('article p').addClass("content");
+    //  $('footer span').addClass("when");
+    //  $('h3').html(name);
+    //  $('.content').html(text);
+    //  $('.handle').html(handle);
+    //  $('.when').html(created);
+    //  $( 'article img' ).attr({
+    //     src: avatars,
+    //     title: "jQuery",
+    //     alt: "Avatar"
+    //   });
+     
+
 
 
 });

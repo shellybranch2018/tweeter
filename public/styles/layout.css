@@ -27,8 +27,12 @@ body {
 
  .container {width: 450px; background: #fff; margin: 91px auto; padding: 2em;}
 
-#tweet-container {margin-top:10px; background:#ffffff; padding:0px}
+#tweet-container {margin-top:10px; background:#ffffff; padding:0px; opacity: .5;}
+#tweet-container:hover {opacity: 10;}
 #tweet-container header {background:#eee; padding:5px}
 #tweet-container header span {float:right; position:relative; top:-38px; color:#333}
 #tweet-container footer {padding:8px; border-top:1px solid; #ccc}
 #tweet-container p {padding:8px}
+#tweet-container img { float: left; padding-right: 10px}
+#tweet-container aside {padding: 10px}
+

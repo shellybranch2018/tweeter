@@ -66,13 +66,11 @@ $(document).ready(function () {
     } else {
         $.post('/tweets',newTweetData).then(function(){
             loadTweets();
+            
         })
         
     };
-    if('textarea:focus'){
-        console.log("active block");
-        // $(".warning").css("display","none");
-    }
+   $('.textbox').val("");
     
      })
 

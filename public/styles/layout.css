@@ -27,8 +27,9 @@ body {
 
  .container {width: 450px; background: #fff; margin: 91px auto; padding: 2em; }
 
- #tweet-container {margin-top:10px; background:#ffffff; padding:0px; opacity: .5; display: block}
- #tweet-container:hover {opacity: 10;}
+ .tweets {margin-top:10px; background:#ffffff; padding:0px; opacity: .5; display: block}
+ .tweets:hover {opacity: 10;}
+ .tweets:hover .icons {display:block}
  #tweet-container header {background:#eee; padding:8px}
  #tweet-container header span {float:right; position:relative; color:#333; clear:both}
  #tweet-container footer {padding:8px; border-top:1px solid; #ccc}
@@ -38,7 +39,7 @@ body {
  #tweet-container h3 {float:right; position:relative; margin-top:-4px}
  .tweets {margin-top:20px; border:1px solid #ccc; border-radius: 6px}
  .new-tweet {border: none; }
- .icons {float: right}
+ .icons {float: right; display: none}
  i {padding-right:3px}
  article {padding: 5px}
  footer {background: #eee}

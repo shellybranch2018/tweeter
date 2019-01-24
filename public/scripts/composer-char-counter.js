@@ -2,7 +2,7 @@ $(document).ready(function() {
     // --- our code goes here ---
 
     // Sets up the count and applies it to the form
-    $( 'textarea' ).on( "keypress", function( event ) {      
+    $( 'textarea' ).on( "keyup", function( event ) {      
         value = 140 - $(this).val().length; 
         if($(this).val().length > 140){
             $(".counter" ).css( "color", "red" );

@@ -67,7 +67,11 @@ $(document).ready(function () {
     if( newTweetData === "text=" || newTweetData  === null){
         $(".warning").css("display","block").text("You must enter text (max characters 140) to send a tweet.");
 
-    } else {
+    } else if(newTweetData.length >= 140){
+        ("input[type=submit]").attr("disabled", "disabled");
+    }
+    
+    else {
         $.post('/tweets',newTweetData).then(function(){
             loadTweets();           
         })       

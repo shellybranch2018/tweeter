@@ -33,7 +33,8 @@ $(document).ready(function () {
             .append(img)
             .append(span);
         // End Header content Tweet body
-        var article = $('<article>').text(tweet["content"].text);
+        var tweetText = $('<p>').text(tweet["content"].text)
+        var article = $('<article>').append(tweetText);
         // End Tweet body 
         //Footer content
         var parsed = parseInt(tweet.created_at);
@@ -60,16 +61,20 @@ $(document).ready(function () {
       let newTweetData = $(this).serialize(); 
  
     if( newTweetData === "text=" || newTweetData  === null){
-      alert("You must enter charaters to submit a tweet. Don't be shy.")
+        $(".warning").css("display","block").text("You must enter text (max characters 140) to send a tweet.");
+
     } else {
         $.post('/tweets',newTweetData).then(function(){
             loadTweets();
         })
         
     };
-   
+    if('textarea:focus'){
+        console.log("active block");
+        // $(".warning").css("display","none");
+    }
     
-    })
+     })
 
 
     

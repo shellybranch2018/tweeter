@@ -4,6 +4,16 @@
  */
 
 $(document).ready(function () {
+
+    $("#hd_btn").click(function() {
+    
+        // $("#toggle").slideToggle();
+        $("#toggle").slideToggle( "slow", function() {
+       
+        });
+      });
+
+
     function renderTweets(tweets) {
         $('.tweets').remove();
         tweets.forEach(function (tweet) {
@@ -24,16 +34,17 @@ $(document).ready(function () {
             .append(span);
         // End Header content Tweet body
         var article = $('<article>').text(tweet["content"].text);
-        // End Tweet body Footer content
+        // End Tweet body 
+        //Footer content
         var parsed = parseInt(tweet.created_at);
         var event = new Date(parsed);
-        let newDate = event.toDateString();
-
-        console.log(newDate);
-        //console.log(parsed);
-        var postDate = $('<span>').text(newDate);
-
-        var footer = $('<footer>').append(postDate);
+        let newDate = event.toDateString();       
+        var postDate = $('<span>').text(newDate);   
+        var ic1 = $('<i>').addClass('fa fa-flag');
+        var ic2 = $('<i>').addClass('fa fa-heart');
+        var ic3 = $('<i>').addClass('fa fa-retweet');
+        var div = $('<div>').addClass('icons').append(ic1).append(ic2).append(ic3);
+        var footer = $('<footer>').append(postDate).append(div);
         //console.log(text)
         let $tweet = $('<article>')
             .addClass('tweets')

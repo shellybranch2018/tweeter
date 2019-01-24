@@ -25,11 +25,11 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- .container {width: 450px; background: #fff; margin: 91px auto; padding: 2em;}
+ .container {width: 450px; background: #fff; margin: 91px auto; padding: 2em; }
 
- #tweet-container {margin-top:10px; background:#ffffff; padding:0px; opacity: .5;}
+ #tweet-container {margin-top:10px; background:#ffffff; padding:0px; opacity: .5; display: block}
  #tweet-container:hover {opacity: 10;}
- #tweet-container header {background:#eee; padding:5px}
+ #tweet-container header {background:#eee; padding:8px}
  #tweet-container header span {float:right; position:relative; color:#333; clear:both}
  #tweet-container footer {padding:8px; border-top:1px solid; #ccc}
  #tweet-container p {padding:8px}
@@ -37,5 +37,24 @@ body {
  #tweet-container aside {padding: 10px}
  #tweet-container h3 {float:right; position:relative; margin-top:-4px}
  .tweets {margin-top:20px; border:1px solid #ccc; border-radius: 6px}
- .new-tweet {border: none;}
+ .new-tweet {border: none; }
+ .icons {float: right}
+ i {padding-right:3px}
+ article {padding: 5px}
+ footer {background: #eee}
+ #hd_btn {
+  float: right;
+  position: relative;
+  top: 9px;
+  padding: 25px;
+  display: block;
+  background: rgba(255,255,255, 0.8);
+  border-radius: 5px;
+  border: 1px solid #000;
+  text-decoration: none;
+  right: 30px;
+  color: #00A187
+}
+.hd_btn:hover {background: #fff}
+#toggle {display: none}
 

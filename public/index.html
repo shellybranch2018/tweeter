@@ -17,8 +17,11 @@
     <!--New Tweet CSS-->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+   
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
@@ -33,11 +36,13 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png" width="80px" height="80px">
       <span class="header">Tweeter</span>
+      <a href="#" id="hd_btn">Compose</a>
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-        <section class="new-tweet">
+      
+        <section id="toggle" class="new-tweet">
             <h2>Compose Tweet</h2>
             <hr />
             <form id="tweet-form">
@@ -46,10 +51,15 @@
               <span class="counter"></span>
             </form>
           </section>
-          <section id="tweet-container" class="new-tweet">
+          <section id="tweet-container">
 
           </section>
+          
     </main>
-
+    <script>
+      // $(document).ready(function(){
+        
+      // });
+      </script>
   </body>
 </html>

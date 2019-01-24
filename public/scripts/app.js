@@ -5,9 +5,10 @@
 
 $(document).ready(function () {
     function renderTweets(tweets) {
+        $('.tweets').remove();
         tweets.forEach(function (tweet) {
             let element = createTweetElement(tweet);
-            $("#tweet-container").append(element);
+            $("#tweet-container").prepend(element);
         });
     }
     function createTweetElement(tweet) {
@@ -49,12 +50,13 @@ $(document).ready(function () {
  
     if( newTweetData === "text=" || newTweetData  === null){
       alert("You must enter charaters to submit a tweet. Don't be shy.")
-    } else $.post('/tweets',newTweetData)
-      
-      
-    
-    
-      //postDog(newDogData)
+    } else {
+        $.post('/tweets',newTweetData).then(function(){
+            loadTweets();
+        })
+        
+    };
+   
     
     })
 
@@ -67,6 +69,7 @@ $(document).ready(function () {
             .then(function (bigTweets) {
                 //console.log('Success: ', bigTweets);
                 renderTweets(bigTweets);
+                
             });
             
     }

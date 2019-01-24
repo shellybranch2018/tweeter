@@ -26,7 +26,6 @@ body {
  */
 
  .container {width: 450px; background: #fff; margin: 91px auto; padding: 2em; }
-
  .tweets {margin-top:10px; background:#ffffff; padding:0px; opacity: .5; display: block}
  .tweets:hover {opacity: 10;}
  .tweets:hover .icons {display:block}

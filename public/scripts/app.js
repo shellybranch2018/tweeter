@@ -76,7 +76,8 @@ $(document).ready(function () {
             loadTweets();           
         })       
     };
-   $('.textbox').val("");   
+   $('.textbox').val("");
+   $('.counter').html(140);   
      })
     // Runs a get request to get the latest tweet and triggers a callback function that renders the tweet to the page.
     function loadTweets() {

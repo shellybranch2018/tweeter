@@ -3,7 +3,8 @@ $(document).ready(function() {
 
     // Sets up the count and applies it to the form
     $( 'textarea' ).on( "keyup", function( event ) {      
-        value = 140 - $(this).val().length; 
+        value = 140 - $(this).val().length;
+        
         if($(this).val().length > 140){
             $(".counter" ).css( "color", "red" );
             $(".warning").css("display","block").text("You have exceeded the 140 character limit.");
@@ -12,7 +13,7 @@ $(document).ready(function() {
             $(".warning").css("display","none");
             $(".counter" ).css( "color", "#000" );
             $(this).siblings().html(value);
-        }else {$(this).siblings().html(value)};
+        }else {$(this).siblings().html(value);};
         
       })
 
